@@ -12,7 +12,7 @@ package social.service;
 public class SocialService {
 
     /**
-     * @param args the command line arguments
+     * @param args the command line argument
      */
     public static void main(String[] args) {
 
