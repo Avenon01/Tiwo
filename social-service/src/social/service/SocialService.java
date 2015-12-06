@@ -11,9 +11,6 @@ package social.service;
  */
 public class SocialService {
 
-    /**
-     * @param args the command line argumen
-     */
     public static void main(String[] args) {
 
     }
