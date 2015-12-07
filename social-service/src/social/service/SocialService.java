@@ -10,7 +10,7 @@ package social.service;
  * @author Avenon
  */
 public class SocialService {
-
+    public static AccountsManager accountManager=new AccountsManager();
     public static void main(String[] args) {
 
     }

@@ -13,17 +13,10 @@ import java.util.HashSet;
  *
  * @author Avenon
  */
-public class Person {
-    Collection<Person> friends= new HashSet<>();
+public interface Person {
+    Collection<Person> friends=new HashSet<>();
     PersonalData personalData=new PersonalData();
-    Collection<Picture> pictures=new ArrayList<Picture>();
-    
-    
-    public Person(PersonalData personalData, Picture profilePicture){
-        
-    }
-    public Person(PersonalData personalData){
-        
-    }
+    Collection<Picture> pictures=new ArrayList<>();
+   
             
 }

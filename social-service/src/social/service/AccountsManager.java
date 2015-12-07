@@ -6,14 +6,17 @@
 package social.service;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 /**
  *
  * @author Avenon
  */
-public abstract class AccountsManager {
-    Collection<Person> UserList;
+public class AccountsManager {
+    Collection<Person> userList=new HashSet<>();
     
-    public abstract void registerUser(Person person);
-    public abstract void unregisterUser(Person person);
+    public  void registerUser(Person person){
+    userList.add(person);
+    }
+    public  void unregisterUser(Person person){}
 }
