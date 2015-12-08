@@ -60,6 +60,5 @@ public class SocialServiceNGTest {
         Account user=new Account(mock(Person.class),"test@mail.com","password1");
         socialService.registerUser(user);
         verify(socialService.mailManager).sendMailVeryficationMessage("test@mail.com");
-
     }
 }

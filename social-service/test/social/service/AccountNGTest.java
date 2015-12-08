@@ -6,6 +6,7 @@
 package social.service;
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.testng.Assert.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -47,5 +48,25 @@ public class AccountNGTest {
         assertTrue(acc.pictures.contains(picture));
         assertTrue(picture.equals(acc.mainPicture));
     }
-
+    @Test
+    public void userShouldAddMarksToPicture(){
+        acc.addPicture(picture);
+        acc.addMarksToPicture(picture,personB);
+        verify(picture).addMarkerOfPerson(personB);
+        assertNotNull(acc.getPicture(picture));
+    }
+    //user should set main picture
+    @Test
+    public void userShouldSetMainPictureIfUserPicturesContainPicture(){
+        acc.addPicture(picture);
+        acc.setMainPicture(picture);
+        assertTrue(picture.equals(acc.mainPicture));
+    }
+    //user should not set main picture if users pictures not contain picture
+    @Test
+    public void userShouldNotSetMainPictureIfUserPicturesNotContainPicture(){
+        acc.setMainPicture(picture);
+        assertFalse(picture.equals(acc.mainPicture));
+    
+    }
 }
