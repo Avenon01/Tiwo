@@ -15,10 +15,11 @@ import java.util.HashSet;
  */
 public class Account {
     private Collection<Person> friends;
-    private Collection<Picture> pictures;
+    public Collection<Picture> pictures;
     private Person person;
     private String password;
     private String email;
+    public Picture mainPicture;
     public Account(Person person, String email,String password){
         friends=new HashSet<>();
         pictures=new ArrayList<>();
@@ -36,6 +37,22 @@ public class Account {
     }
     String getPassword(){
         return password;
+    }
+
+    String getMail() {
+        return email;
+    }
+
+    void addPicture(Picture picture, boolean b, Person personB) {
+        
+    }
+
+    void addPicture(Picture picture) {
+        pictures.add(picture);
+    }
+    void addPicture(Picture picture,boolean setAsMainPicture) {
+        pictures.add(picture);
+        mainPicture = picture;
     }
     
 }

@@ -5,10 +5,19 @@
  */
 package social.service;
 
+import java.awt.Image;
+import java.util.Collection;
+import java.util.HashSet;
+
 /**
  *
  * @author Avenon
  */
 public interface Picture {
+    int width = 0;
+    int hight = 0;
+    Image image= null;
+    Collection<Person> markersOfPeople=new HashSet<>();
     
+    void addMarkerOfPerson(Person person);
 }

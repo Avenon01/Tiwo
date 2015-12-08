@@ -14,9 +14,15 @@ import java.util.HashSet;
  */
 public class SocialService {
     Collection<Account> userList=new HashSet<>();
+    MailManager mailManager;
+    
+    SocialService(MailManager mailManager){
+        this.mailManager = mailManager;
+    }
     
     public  void registerUser(Account account){
         userList.add(account);
+        mailManager.sendMailVeryficationMessage(account.getMail());
     }
     
     public  void unregisterUser(Account account){
