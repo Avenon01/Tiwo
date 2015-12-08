@@ -5,12 +5,24 @@
  */
 package social.service;
 
+import java.util.Collection;
+import java.util.HashSet;
+
 /**
  *
  * @author Avenon
  */
 public class SocialService {
-    public static AccountsManager accountManager=new AccountsManager();
+    Collection<Account> userList=new HashSet<>();
+    
+    public  void registerUser(Account account){
+        userList.add(account);
+    }
+    
+    public  void unregisterUser(Account account){
+        userList.remove(account);
+    }
+    
     public static void main(String[] args) {
 
     }

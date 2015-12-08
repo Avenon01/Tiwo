@@ -14,9 +14,5 @@ import java.util.HashSet;
  * @author Avenon
  */
 public interface Person {
-    Collection<Person> friends=new HashSet<>();
-    PersonalData personalData=new PersonalData();
-    Collection<Picture> pictures=new ArrayList<>();
-   
-            
+    PersonalData personalData=new PersonalData();       
 }
